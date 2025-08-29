@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = 'http://localhost:3500/';
+const baseUrl = 'https://harp503-capstone.onrender.com/';
 
 export async function getProducts() {
     const { data } = await axios.get(`${baseUrl}products`);
