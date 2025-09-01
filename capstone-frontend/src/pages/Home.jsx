@@ -18,6 +18,7 @@ const Home = () => {
   return (
     <main className='main-content'>
       <h2>Home</h2>
+      Testing changes!!!!
       <Products products={products} />
     </main>
   )
