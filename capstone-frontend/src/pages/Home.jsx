@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <main className='main-content'>
       <h2>Home</h2>
-      <p>Testing deployment</p>
+      <p>ABC</p>
       <Products products={products} />
     </main>
   )
