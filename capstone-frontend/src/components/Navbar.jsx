@@ -6,16 +6,23 @@ import '../styles/navbar.css';
 const Navbar = () => {
   const { items } = useCartStore();
   const totalPrice = items?.reduce((total, item) => total + item.price, 0);
-  return (
-    <nav className='navbar'>
-      <h1>Header Goes Here</h1>
-      <section className='nav-links-container'>
-        <NavLink to="/" className='nav-link'>Home</NavLink>
-        {/* You will have to adjust the NavLink element below this comment to create a real checkout page, starting with creating a new route in your project and then adjusting the `to` property */}
-        <NavLink to="#" className='nav-link'>Checkout ${totalPrice}</NavLink>
-        {/* Create New NavLink Elements in your project and place them below this comment */}
 
-        {/* Create New NavLink Elements in your project and place them above this comment */}
+  return (
+    <nav className="navbar navbar-dark bg-dark shadow-sm px-3">
+      {/* Brand */}
+      <h1 className="navbar-brand m-0 fw-bold fs-3">Capstone</h1>
+
+      {/* Links */}
+      <section className="nav-links-container d-flex align-items-center gap-3 ms-auto">
+        <NavLink to="/" className="nav-link">Home</NavLink>
+
+        {/* Keep your placeholder route to avoid new route requirements */}
+        <NavLink to="#" className="btn btn-outline-light">
+          Checkout ${totalPrice ?? 0}
+        </NavLink>
+
+        {/* Add more links below if needed; keep className="nav-link" */}
+        {/* <NavLink to="#" className="nav-link">About</NavLink> */}
       </section>
     </nav>
   )
