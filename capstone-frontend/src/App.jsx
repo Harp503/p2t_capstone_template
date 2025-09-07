@@ -1,24 +1,26 @@
-import React from 'react'
-import { Route, Routes } from 'react-router'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import Home from './pages/Home'
-import NotFound from './pages/NotFound'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router"; 
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
+import Checkout from "./pages/Checkout";
 
-const App = () => {
+function App() {
   return (
-    <section className='app'>
+    <section>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         {/* Create your new routes in your application and place them below this comment */}
-        
-        {/* Create your new routes in your application and place them above this comment */}
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer />
     </section>
-  )
+  );
 }
 
-export default App
+export default App;

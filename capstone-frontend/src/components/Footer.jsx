@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
   return (
     <footer className='footer'>
-      <h2>Footer (c) {currentYear}</h2>
+      <h4>Footer (c) {currentYear}</h4>
     </footer>
   )
 }
